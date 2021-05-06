@@ -35,37 +35,3 @@ class Form {
 }
 
 const form = new Form();
-
-// Initialize form values
-// let values = {
-// 	username: "",
-// 	email: "",
-// 	password: "",
-// 	terms: false,
-// };
-
-// // Update form state on change
-// document
-// 	.getElementById("form")
-// 	.addEventListener("change", e => handleFormChange(e));
-
-// function handleFormChange(e) {
-// 	const { name, value, checked, type } = e.target;
-// 	const state = type === "checkbox" ? checked : value;
-// 	values = {
-// 		...values,
-// 		[name]: state,
-// 	};
-// }
-
-// // Validate form details
-// document
-// 	.getElementById("submit")
-// 	.addEventListener("click", e => validateForm(e));
-
-// function validateForm(e) {
-// 	e.preventDefault();
-// 	const { username, email, password, terms } = values;
-// 	let temp = [];
-// 	username.value === "" || username.length;
-// }
