@@ -4,6 +4,6 @@
 
 @tailwind utilities;
 
-#checkbox {
-	transform: scale(1.25);
+#terms {
+	transform: scale(1.1);
 }
