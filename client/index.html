@@ -33,7 +33,7 @@
 				<form id="form" class="space-y-4">
 					<div>
 						<label for="username" class="block mb-1 text-blue-800">
-							Username
+							Username*
 						</label>
 						<input
 							type="text"
@@ -47,7 +47,7 @@
 							Email
 						</label>
 						<input
-							type="email"
+							type="text"
 							name="email"
 							id="email"
 							class="w-full border border-solid border-gray-300 py-1 px-2 rounded outline-none focus:border-blue-300"
@@ -55,7 +55,7 @@
 					</div>
 					<div>
 						<label for="password" class="block mb-1 text-blue-800">
-							Password
+							Password*
 						</label>
 						<input
 							type="password"
@@ -72,8 +72,14 @@
 							class="focus:border-blue-300 cursor-pointer transform scale-1.5"
 						/>
 						<label for="checkbox" class="mb-1 text-gray-700 ml-2 text-sm">
-							I agree to the terms and conditions
+							I agree to the terms and conditions*
 						</label>
+					</div>
+					<div
+						id="errors-container"
+						class="hidden p-2 border border-red-300 rounded"
+					>
+						<ul id="error-list" class="text-lg text-red-600"></ul>
 					</div>
 					<div class="flex justify-center">
 						<button
