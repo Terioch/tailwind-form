@@ -23,6 +23,7 @@ class Form {
 		const { name, value, checked } = e.target;
 		const string = typeof this.values[name] === "string";
 		const state = string ? value : checked;
+
 		this.values = {
 			...this.values,
 			[name]: state,
@@ -36,13 +37,16 @@ class Form {
 			username.length > 0 && username.length < 23
 				? ""
 				: "Username must not be empty and be no more than 22 characters";
+
 		this.errors.email = /$^|.+@.+..+/.test(email)
 			? ""
 			: "Email is invalid";
+
 		this.errors.password =
 			password.length > 5
 				? ""
 				: "Password must not be empty and be at least 6 characters";
+
 		this.errors.terms = terms
 			? ""
 			: "You must agree to the terms and conditions";
