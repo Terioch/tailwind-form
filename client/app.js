@@ -56,15 +56,13 @@ class Form {
 		const errorList = document.getElementById("error-list");
 		errorList.innerHTML = "";
 
-		if (!this.isFormValid()) {
-			Object.keys(this.errors).map(error => {
-				const errorText = `<li>${this.errors[error]}</li>`;
-				errorList.insertAdjacentHTML("beforeend", errorText);
-			});
-			errorsContainer.style.display = "block";
-		} else {
-			window.location.href = "/";
-		}
+		if (this.isFormValid()) return (window.location.href = "/");
+
+		Object.keys(this.errors).map(error => {
+			const errorText = `<li>${this.errors[error]}</li>`;
+			errorList.insertAdjacentHTML("beforeend", errorText);
+		});
+		errorsContainer.style.display = "block";
 	}
 }
 
