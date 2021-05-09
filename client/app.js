@@ -62,6 +62,7 @@ class Form {
 			const errorText = `<li>${this.errors[error]}</li>`;
 			errorList.insertAdjacentHTML("beforeend", errorText);
 		});
+
 		errorsContainer.style.display = "block";
 	}
 }
