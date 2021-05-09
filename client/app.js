@@ -31,7 +31,6 @@ class Form {
 
 	isFormValid() {
 		const { username, email, password, terms } = this.values;
-		console.log(username.length);
 
 		this.errors.username =
 			username.length > 0 && username.length < 23
@@ -47,6 +46,7 @@ class Form {
 		this.errors.terms = terms
 			? ""
 			: "You must agree to the terms and conditions";
+
 		return Object.values(this.errors).every(e => e === "");
 	}
 
